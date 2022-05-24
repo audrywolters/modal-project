@@ -1,6 +1,6 @@
 <template>
   <h1>{{ title }}</h1>
-  <Modal />
+  <Modal :header="header" :text="text" theme="sale" />
 </template>
 
 <script>
@@ -13,7 +13,9 @@ export default {
   },
   data() {
     return {
-      title: 'Vue App :)'
+      title: 'Vue App :)',
+      header: 'you could sign up if you want',
+      text: 'get some swag and stuff'
     }
   }
 }
