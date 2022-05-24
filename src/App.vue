@@ -10,8 +10,16 @@
       </template>
     </Modal>
   </div>
+
+  <div v-if="showModalTwo">
+    <Modal @close="toggleModalTwo">
+      <h1>test</h1>
+    </Modal>
+  </div>
+
   <br/>
   <button @click="toggleModal">open modal</button>
+  <button @click="toggleModalTwo">open other modal</button>
 </template>
 
 <script>
@@ -25,12 +33,16 @@ export default {
   data() {
     return {
       title: 'Vue App :)',
-      showModal: false
+      showModal: false,
+      showModalTwo: false
     }
   },
   methods: {
     toggleModal() {
       this.showModal = !this.showModal
+    },
+    toggleModalTwo() {
+      this.showModalTwo = !this.showModalTwo
     }
   }
 }
