@@ -21,12 +21,10 @@ export default {
   name: 'App',
   components: {
     Modal
-  },
+},
   data() {
     return {
       title: 'Vue App :)',
-      header: 'you could sign up if you want',
-      text: 'get some swag and stuff',
       showModal: false
     }
   },
